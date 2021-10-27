@@ -1,0 +1,457 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>Artsy Lens</title>
+    <style>
+        body{
+    background: #000000;
+}
+@font-face {
+    font-family: last-paradise;
+    src: url("svn_last_paradise/SVN-Last Paradise.ttf");
+}
+:root{
+    --trans: all 0.3s linear;
+}
+/*header start*/
+header .logo a{
+    font-size: 35px;
+    font-family: 'Gluten', cursive;
+    font-weight: 700;
+    text-decoration: none;
+    transition: var(--trans);
+    padding-right: 50px;
+    color: #ffffff;
+}
+header .logo a:hover{
+    color: #18c5a3;
+}
+header .container ul li a{
+    text-decoration: none;
+    font-size: 20px;
+    color: #ffffff;
+    transition: var(--trans);
+}
+header .container ul li a:hover{
+    color: #18c5a3;
+}
+header .header-below button{
+    color: #000000;
+    font-size: 20px;
+    font-weight: 600;
+    border: none;
+    background: #ffffff;
+    padding: 10px 15px;
+    border-radius: 60px;
+    transition: var(--trans);
+}
+/*header end*/
+
+
+/*introduction start*/
+.introduction h2{
+    color: #ffff;
+}
+.introduction .introduction-img img{
+    border-radius: 50%;
+    width: 30%;
+    height: 30%;
+}
+.introduction p{
+    color: #8a8a8a;
+}
+/*introduction end*/
+
+/*footerpart start*/
+footer{
+    background: #212529;
+    margin-top: 100px;
+    
+}
+footer hr{
+    color: #ffff;
+}
+footer .footer-internal{
+    max-width: 1250px;
+    margin: 0 auto;
+    padding-top: 70px;
+    padding-bottom: 30px;
+    display: grid;
+    grid-template-columns: 3fr 3fr 2fr 2fr;
+    grid-template-areas: "part1 part2 part3 part4";
+    
+}
+footer h2{
+    color: #ffff;
+    font-size: 20px;
+    padding-bottom: 30px;
+    font-weight: 700;
+}
+footer p{
+    color: #8a8a8a;
+    font-size: 14px;
+}
+footer .footer-internal .part1{
+    grid-area: part1;
+}
+footer .footer-internal .part1 img{
+    width: 140px;
+    height: 40px;
+}
+footer .footer-internal .part2{
+    grid-area: part2;
+}
+footer .footer-internal .part2 img{
+    height: 50px;
+    width: 180px;
+}
+footer .footer-internal .part3{
+    grid-area: part3;
+}
+footer .footer-internal .part4{
+    grid-area: part4;
+}
+footer .final-part p{
+    text-align: center;
+    color: #ffff;
+    padding-bottom: 20px;
+}
+/*footer part end*/
+    </style>
+</head>
+
+<body>
+    <!--header part start-->
+    <header class="p-3 bg-dark text-white">
+        <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                <div class="logo">
+                    <a href="/" class="d-flex align-items-center mb-2 mb-lg-0  text-decoration-none">
+                        Artsy Lens
+                    </a>
+                </div>
+                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                    <li><a href="home_page.html" class="nav-link px-2 ">Home</a></li>
+                    <li><a href="catagory.html" class="nav-link px-2 ">Catagory</a></li>
+                    <li><a href="photographers.html" class="nav-link px-2 ">Photographers</a></li>
+                    <li><a href="adout.html" class="nav-link px-2 ">About</a></li>
+                    <li><a href="contact.html" class="nav-link px-2 ">Contact US</a></li>
+                </ul>
+
+                <div class="text-end">
+                    <div class="log_sign">
+                        <button type="button" class="btn btn-outline-light me-2 sign_in" data-bs-toggle="modal"
+                            data-bs-target="#loginModal">Login</button>
+                        <button type="button" class="btn btn-warning join" data-bs-toggle="modal"
+                            data-bs-target="#signupModal">Sign-up</button>
+                    </div>
+                </div>
+            </div>
+            <div class="header-below">
+                <div class="p-4 p-md-5 mb-4 text-white rounded bg-dark">
+                    <div class="col-md-6 px-0">
+                        <h1 class="display-4 fst-italic">Title of a longer featured blog post</h1>
+                        <p class="lead my-3">Multiple lines of text that form the lede, informing new readers quickly
+                            and
+                            efficiently about what’s most interesting in this post’s contents.</p>
+                        <button type="button" class="" data-bs-toggle="modal" data-bs-target="#readingModal">Continue
+                            reading</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </header>
+    <!--header part end-->
+
+    <!-- log in -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="fw-bold mb-0">Login</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form class="">
+                        <div class="form-floating mb-3">
+                            <input type="email" class="form-control rounded-4" id="floatingInput"
+                                placeholder="name@example.com">
+                            <label for="floatingInput">Email address</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input type="password" class="form-control rounded-4" id="floatingPassword"
+                                placeholder="Password">
+                            <label for="floatingPassword">Password</label>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button class="w-100 mb-2 btn btn-lg rounded-4 btn-primary" type="submit">Sign up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- sign up -->
+    <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="mb-3">Sign Up</h4>
+                </div>
+                <div class="modal-body">
+                    <form class="needs-validation" novalidate="">
+                        <div class="row g-3">
+                            <div class="col-sm-6">
+                                <label for="firstName" class="form-label">First name</label>
+                                <input type="text" class="form-control" id="firstName" placeholder="" value=""
+                                    required="">
+                                <div class="invalid-feedback">
+                                    Valid first name is required.
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <label for="lastName" class="form-label">Last name</label>
+                                <input type="text" class="form-control" id="lastName" placeholder="" value=""
+                                    required="">
+                                <div class="invalid-feedback">
+                                    Valid last name is required.
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <label for="username" class="form-label">Username</label>
+                                <div class="input-group has-validation">
+                                    <span class="input-group-text">@</span>
+                                    <input type="text" class="form-control" id="username" placeholder="Username"
+                                        required="">
+                                    <div class="invalid-feedback">
+                                        Your username is required.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <label for="nid" class="form-label">NID </label>
+                                <input type="text" class="form-control" id="nid" placeholder="NID no.">
+                                <div class="invalid-feedback">
+                                    Please enter valid NID NO.
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <label for="email" class="form-label">Email <span
+                                        class="text-muted">(Optional)</span></label>
+                                <input type="email" class="form-control" id="email" placeholder="you@example.com">
+                                <div class="invalid-feedback">
+                                    Please enter a valid email address for shipping updates.
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <label for="address" class="form-label">Address</label>
+                                <input type="text" class="form-control" id="address" placeholder="1234 Main St"
+                                    required="">
+                                <div class="invalid-feedback">
+                                    Please enter your shipping address.
+                                </div>
+                            </div>
+
+                            <div class="col-12">
+                                <label for="address2" class="form-label">Address 2 <span
+                                        class="text-muted">(Optional)</span></label>
+                                <input type="text" class="form-control" id="address2" placeholder="Apartment or suite">
+                            </div>
+
+                            <div class="col-md-5">
+                                <label for="country" class="form-label">City</label>
+                                <select class="form-select" id="country" required="">
+                                    <option value="">Choose...</option>
+                                    <option>Dhaka</option>
+                                    <option>Chittagong</option>
+                                    <option>Rajshahi</option>
+                                    <option>Khulna</option>
+                                    <option>Sylhet</option>
+                                    <option>Mymensingh</option>
+                                    <option>Barisal</option>
+                                    <option>Rangpur</option>
+                                    <option>Comilla</option>
+                                    <option>Narayanganj</option>
+                                    <option>Gazipur</option>
+                                </select>
+                                <div class="invalid-feedback">
+                                    Please select a valid country.
+                                </div>
+                            </div>
+
+
+
+                            <div class="col-md-3">
+                                <label for="zip" class="form-label">Zip</label>
+                                <input type="text" class="form-control" id="zip" placeholder="" required="">
+                                <div class="invalid-feedback">
+                                    Zip code required.
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <div class="row gy-3">
+                        <div class="col-md-6">
+                            <label for="cc-name" class="form-label">Name on card</label>
+                            <input type="text" class="form-control" id="cc-name" placeholder="" required="">
+                            <small class="text-muted">Full name as displayed on card</small>
+                            <div class="invalid-feedback">
+                                Name on card is required
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="cc-number" class="form-label">Credit card number</label>
+                            <input type="text" class="form-control" id="cc-number" placeholder="" required="">
+                            <div class="invalid-feedback">
+                                Credit card number is required
+                            </div>
+                        </div>
+
+                        <div class="col-md-3">
+                            <label for="cc-expiration" class="form-label">Expiration</label>
+                            <input type="text" class="form-control" id="cc-expiration" placeholder="" required="">
+                            <div class="invalid-feedback">
+                                Expiration date required
+                            </div>
+                        </div>
+
+                        <div class="col-md-3">
+                            <label for="cc-cvv" class="form-label">CVV</label>
+                            <input type="text" class="form-control" id="cc-cvv" placeholder="" required="">
+                            <div class="invalid-feedback">
+                                Security code required
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr class="my-4">
+
+                    <button class="w-100 btn btn-primary btn-lg" type="submit">Continue to Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Continue reading -->
+    <div class="modal fade" id="readingModal" tabindex="-1" aria-labelledby="readingModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="readingModalLabel">About Artsy Lens</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure veritatis accusamus cumque, iste,
+                        impedit magni nam odit repudiandae fugiat eligendi asperiores nesciunt autem sequi molestias
+                        reiciendis aliquid amet ea voluptatibus, facere fugit est? Porro.</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="introduction">
+        <div class="container">
+            <div class="row my-lg-5">
+                <div class="col-lg-4 text-center">
+                    <div class="introduction-img">
+                        <img src="pics/nasim.jpg" alt="">
+                    </div>
+
+                    <h2>Heading</h2>
+                    <p>Some representative placeholder content for the three columns of text below the carousel. This is
+                        the
+                        first column.</p>
+                </div><!-- /.col-lg-4 -->
+                <div class="col-lg-4 text-center">
+                    <div class="introduction-img">
+                        <img src="pics/hasib.jpg" alt="">
+                    </div>
+
+                    <h2>Heading</h2>
+                    <p>Another exciting bit of representative placeholder content. This time, we've moved on to the
+                        second
+                        column.</p>
+                </div><!-- /.col-lg-4 -->
+                <div class="col-lg-4 text-center">
+                    <div class="introduction-img">
+                        <img src="pics/jonayed.jpg" alt="">
+                    </div>
+
+                    <h2>Heading</h2>
+                    <p>And lastly this, the third column of representative placeholder content.</p>
+                </div><!-- /.col-lg-4 -->
+            </div>
+        </div>
+    </div>
+    <!--Footer part start-->
+    <footer>
+        <div class="footer-internal">
+            <div class="part1">
+                <h2>Our officail Ap</h2>
+                <p>Coming Soon</p>
+                <div class="part1-img">
+                    <img src="pics/play-store.png" alt="">
+                    <img src="pics/app-store.png" alt="">
+                </div>
+            </div>
+            <div class="part2">
+                <h2>Our Partner</h2>
+                <div class="part2-img">
+                    <img src="pics/logo-white.png" alt="">
+                </div>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis, nulla ipsam! Quis et ex</p>
+            </div>
+            <div class="part3">
+                <h2>Follow Us</h2>
+                <p>Facebook</p>
+                <p>Twiter</p>
+                <p>Instagram</p>
+                <p>Youtube</p>
+            </div>
+            <div class="part4">
+                <h2>Contact Us</h2>
+                <p>Phone:01516051683</p>
+                <p>Email: admin.artsy@gmail.com</p>
+            </div>
+        </div>
+        <hr>
+        <div class="final-part">
+            <p>Copyright 2021-Artsy Lens</p>
+        </div>
+    </footer>
+    <!--Footer part start-->
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>
